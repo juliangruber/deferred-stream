@@ -8,6 +8,10 @@ Uses Streams2 and falls back to
 [readable-stream](https://github.com/isaacs/readable-stream) on older node
 versions or browserify.
 
+[![build status](https://secure.travis-ci.org/juliangruber/deferred-stream.png)](http://travis-ci.org/juliangruber/deferred-stream)
+
+[![testling badge](https://ci.testling.com/juliangruber/deferred-stream.png)](https://ci.testling.com/juliangruber/deferred-stream)
+
 ## Example
 
 ```js
