@@ -4,7 +4,9 @@
 A simple deferred stream, useful when you need to do async operations before
 emitting data.
 
-Uses Streams2!
+Uses Streams2 and falls back to
+[readable-stream](https://github.com/isaacs/readable-stream) on older node
+versions or browserify.
 
 ## Example
 

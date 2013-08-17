@@ -1,6 +1,7 @@
 var test = require('tape');
 var deferred = require('./');
-var Writable = require('stream').Writable;
+var Writable = require('stream').Writable
+|| require('readable-stream').Writable;
 
 test('deferred', function (t) {
   t.plan(1);

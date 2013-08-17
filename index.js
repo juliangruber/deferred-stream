@@ -1,4 +1,5 @@
-var PassThrough = require('stream').PassThrough;
+var PassThrough = require('stream').PassThrough
+|| require('readable-stream').PassThrough;
 
 module.exports = deferred;
 
