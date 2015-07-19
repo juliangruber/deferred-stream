@@ -14,6 +14,7 @@ versions or browserify.
 
 ## Example
 
+###with data
 ```js
 var deferred = require('deferred-stream');
 
@@ -24,11 +25,22 @@ deferred(function (str) {
 }).pipe(process.stdout);
 ```
 
+###with objects
+```js
+var deferred = require('deferred-stream');
+
+deferred({objectMode: true}, function (str) {
+  setTimeout(function () {
+    str.write({message: 'hey'});
+  }, 1000);
+});
+```
+
 ## API
 
-### deferred(fn)
+### deferred([options], fn)
 
-Returns a readable stream and calls `fn` with it.
+Returns a readable stream and calls `fn` with it.  `options` are passed to the underlying stream.
 
 ## Installation
 
