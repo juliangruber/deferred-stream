@@ -3,8 +3,12 @@ var PassThrough = require('stream').PassThrough
 
 module.exports = deferred;
 
-function deferred (fn) {
-  var str = PassThrough();
+function deferred (options, fn) {
+  if (!fn) {
+    fn = options;
+    options = null;
+  }
+  var str = PassThrough(options);
   fn(str);
   return str;
 }

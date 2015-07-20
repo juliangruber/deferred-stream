@@ -26,9 +26,9 @@ deferred(function (str) {
 
 ## API
 
-### deferred(fn)
+### deferred([options, ] fn)
 
-Returns a readable stream and calls `fn` with it.
+Returns a readable stream and calls `fn` with it.  `options` is passed down to the underlying `Stream` constructor, so use this for example to set `objectMode` to `true`.
 
 ## Installation
 

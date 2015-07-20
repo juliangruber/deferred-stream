@@ -18,3 +18,18 @@ test('deferred', function (t) {
   }).pipe(wr);
 });
 
+
+test('options', function (t) {
+  t.plan(1);
+
+  var wr = Writable({ objectMode: true });
+  wr._write = function (obj) {
+    t.deepEqual(obj, { key: 'value' });
+  }
+
+  deferred({ objectMode: true }, function (str) {
+    setTimeout(function () {
+      str.end({ key: 'value' });
+    });
+  }).pipe(wr);
+});
