@@ -12,10 +12,10 @@
     "test": "tape test.js"
   },
   "dependencies": {
-    "readable-stream": "~1.0.15"
+    "readable-stream": "~2.1.5"
   },
   "devDependencies": {
-    "tape": "~1.0.4"
+    "tape": "~4.6.2"
   },
   "keywords": [
     "deferred",
